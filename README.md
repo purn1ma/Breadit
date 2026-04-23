@@ -4,7 +4,7 @@ A full-stack Reddit-like web application where users can create communities, pos
 
 ## Live Demo
 
-[Coming soon — deploying on Vercel]
+[breadit-theta-liart.vercel.app](https://breadit-theta-liart.vercel.app)
 
 ## Tech Stack
 
@@ -30,32 +30,6 @@ A full-stack Reddit-like web application where users can create communities, pos
 - **Search** — Real-time community search with debouncing
 - **Infinite Scroll** — Feed loads more posts as you scroll
 - **Image Uploads** — Post images via Uploadthing
-
-## Architecture Overview
-
-```
-src/
-├── app/                  # Next.js App Router pages and API routes
-│   ├── api/              # Backend API endpoints (posts, votes, comments, auth)
-│   └── r/                # Community pages and post pages
-├── components/           # Reusable UI components
-├── hooks/                # Custom React hooks
-├── lib/                  # Utility functions, db client, auth config
-└── types/                # TypeScript type definitions
-
-prisma/
-└── schema.prisma         # Database schema (User, Post, Comment, Vote, Subreddit)
-```
-
-## Database Schema
-
-The app uses 7 models:
-- **User** — stores profile, linked accounts, sessions
-- **Subreddit** — a community with a name and creator
-- **Subscription** — links users to communities they've joined
-- **Post** — belongs to a subreddit and author, stores rich text content as JSON
-- **Comment** — supports nested replies via self-referential relation
-- **Vote / CommentVote** — tracks upvotes/downvotes per user per post/comment
 
 ## Getting Started
 
